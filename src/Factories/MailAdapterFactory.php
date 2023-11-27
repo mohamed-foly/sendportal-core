@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Sendportal\Base\Factories;
 
 use InvalidArgumentException;
+use Sendportal\Base\Adapters\AzureAdapter;
 use Sendportal\Base\Adapters\MailgunMailAdapter;
 use Sendportal\Base\Adapters\MailjetAdapter;
 use Sendportal\Base\Adapters\PostmarkMailAdapter;
@@ -27,6 +28,7 @@ class MailAdapterFactory
         EmailServiceType::MAILJET => MailjetAdapter::class,
         EmailServiceType::SMTP => SmtpAdapter::class,
         EmailServiceType::POSTAL => PostalAdapter::class,
+        EmailServiceType::AZURE => AzureAdapter::class
     ];
 
     /**
